@@ -87,7 +87,7 @@ nav {
 }
 
 .input:hover {
-  border-color: rgb(230, 164, 0);
+  border-color: rgb(12, 0, 59);
   cursor: pointer;
 }
 
@@ -122,7 +122,7 @@ nav {
 .input:focus,
 input:valid {
   outline: none;
-  border: 1.5px solid rgb(235, 93, 5);
+  border: 1.5px solid rgb(0, 157, 255);
 }
 
 .input:focus ~ .placeholder {
@@ -209,3 +209,47 @@ input:valid {
     display: none;
   }
 }
+
+@keyframes drop {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+.teardrop {
+  position: fixed;
+  width: 10px;
+  height: 20px;
+  background: blue;
+  border-radius: 50%;
+  animation: drop 2s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes move {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50px, 50px); }
+  50% { transform: translate(-50px, 100px); }
+  75% { transform: translate(50px, 150px); }
+  100% { transform: translate(0, 200px); }
+}
+
+#crySmiley {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animate {
+  animation: move 4s linear forwards;
+}
+

@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/index.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <noscript
-      ><strong
-        >Sorry but this website will not work properly without JavaScript
-        enabled. Please enable it to continue.</strong
-      ></noscript
-    >
-    <div class="whole__app">
-      <nav>
-        <div class="nav__content--wrapper">
-          <figure class="nav__logo--figure">
-            <img src="/assets/movie.svg" class="logo__class" alt="" />
-          </figure>
-          <button class="burger__menu">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <ul class="nav__links--list">
-            <li class="nav__link">
-              <a href="#" class="link nav__link--exact nav__link--active"
-                >Home</a
-              >
-            </li>
-            <li class="nav__link">
-              <a href="#" class="link">Search </a>
-            </li>
-            <li class="nav__link">
-              <a class="btn__contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <section class="landing__page">
-        <div class="landing__page--text">
-          
-          <h1>is it movie time?</h1>
-          <h2>just type keywords and we will make it happen</h2>
-        </div>
-        <div class="input__wrapper">
-          <input type="text" class="input" id="searchInput" placeholder="Genre or Name" > 
-          <label class="placeholder" for="searchInput"></label>
-          <button class="not__loading--static" id="searchButton">
-            <figure class="search__icon">
-              <i class="fab fa-searchengin"></i>
-            </figure>
-          </button>
-        </div>
-        <div class="movies__container"> <!-- Add this div -->
-          <!-- Movie results will be displayed here -->
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/index.js" defer></script>
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
 
-        
-      </section>
-      
+<body>
+  <noscript>
+    <strong>
+      Sorry but this website will not work properly without JavaScript
+      enabled. Please enable it to continue.
+    </strong>
+  </noscript>
+  <div class="whole__app">
+    <nav>
+      <div class="nav__content--wrapper">
+        <figure class="nav__logo--figure">
+          <img src="/assets/movie.svg" class="logo__class" alt="" />
+        </figure>
+        <button class="burger__menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav__links--list">
+          <li class="nav__link">
+            <a href="#" class="link nav__link--exact nav__link--active">Home</a>
+          </li>
+          <li class="nav__link">
+            <a href="#" class="link">Search</a>
+          </li>
+          <li class="nav__link">
+            <button id="cryButton" class="bg-blue-500 text-white px-4 py-2 rounded ml-4">Cry</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="landing__page">
+      <div class="landing__page--text">
+        <h1>forgot the name of a movie?</h1>
+        <h2>lets find it with keywords!</h2>
+      </div>
+      <div class="input__wrapper">
+        <input type="text" class="input" id="searchInput" placeholder="Genre or Name">
+        <label class="placeholder" for="searchInput"></label>
+        <button class="not__loading--static" id="searchButton">
+          <figure class="search__icon">
+            <i class="fab fa-searchengin"></i>
+          </figure>
+        </button>
+      </div>
+      <div class="movies__container">
+        <!-- Movie results will be displayed here -->
+      </div>
+    </section>
+    <div id="tearContainer" class="hidden"></div>
+    <div id="crySmileyContainer" class="hidden">
+      <svg id="crySmiley" width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Your SVG content here -->
+        <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2"/>
+        <circle cx="9" cy="10" r="1" fill="black"/>
+        <circle cx="15" cy="10" r="1" fill="black"/>
+        <path d="M8 16c1.5 2 6 2 7 0" stroke="black" stroke-width="2"/>
+      </svg>
     </div>
-  </body>
+  </div>
+</body>
 </html>
